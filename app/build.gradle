@@ -31,11 +31,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.x.y'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'org.greenrobot:eventbus:3.1.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
-    implementation 'com.squareup.okio:okio:2.1.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation files('libs/litepal-2.0.0.jar')
+    api 'io.reactivex.rxjava2:rxjava:2.x.y'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'org.greenrobot:eventbus:3.1.1'
+    api 'com.squareup.okhttp3:okhttp:3.12.1'
+    api 'com.squareup.okio:okio:2.1.0'
+    api 'com.google.code.gson:gson:2.8.5'
+    api files('libs/litepal-2.0.0.jar')
 }
