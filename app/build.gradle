@@ -43,8 +43,7 @@ dependencies {
     api 'com.squareup.okio:okio:2.1.0'
     api 'com.google.code.gson:gson:2.8.5'
     api 'org.litepal.android:java:3.0.0'
-
-
-
     api files('libs/joda-time-2.5.jar')
+    api files('libs/TencentLocationSdk_v7.1.6.1_r67ba7298_20190409_142648.jar')
+    api files('libs/sun.misc.BASE64Decoder.jar')
 }
