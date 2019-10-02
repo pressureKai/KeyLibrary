@@ -43,5 +43,5 @@ dependencies {
     api 'com.squareup.okhttp3:okhttp:3.12.1'
     api 'com.squareup.okio:okio:2.1.0'
     api 'com.google.code.gson:gson:2.8.5'
-    api files('libs/litepal-2.0.0.jar')
+    implementation files('libs/litepal-2.0.0.jar')
 }
