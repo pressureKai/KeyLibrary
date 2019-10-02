@@ -43,4 +43,8 @@ dependencies {
     api 'com.squareup.okio:okio:2.1.0'
     api 'com.google.code.gson:gson:2.8.5'
     api 'org.litepal.android:java:3.0.0'
+
+
+
+    api files('libs/joda-time-2.5.jar')
 }
