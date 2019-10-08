@@ -1,6 +1,5 @@
 package com.key.keylibrary.base;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
@@ -13,7 +12,6 @@ import java.util.List;
  * created by key  on 2019/1/6
  */
 public class GlobalApplication extends LitePalApplication {
-    @SuppressLint("StaticFieldLeak")
     private static Context context;
     private static Handler handler;
     private static int mainThreadId;

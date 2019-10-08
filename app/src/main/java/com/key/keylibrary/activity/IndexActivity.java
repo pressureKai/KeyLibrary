@@ -1,16 +1,15 @@
 package com.key.keylibrary.activity;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
 import com.key.keylibrary.R;
+import com.key.keylibrary.base.BaseActivity;
 
-public class IndexActivity extends AppCompatActivity {
+public class IndexActivity extends BaseActivity {
+    @Override
+    public void setContentView() {
+        setContentView(R.layout.activity_main);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initView() {
+
     }
 }
