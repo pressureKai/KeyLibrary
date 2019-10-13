@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.key.keylibrary.activity.IndexActivity;
 import me.jessyan.autosize.AutoSize;
 import me.jessyan.autosize.AutoSizeCompat;
 import me.jessyan.autosize.AutoSizeConfig;
@@ -60,7 +59,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private void customAdaptForExternal() {
         AutoSizeConfig.getInstance().getExternalAdaptManager()
-                .addExternalAdaptInfoOfActivity(IndexActivity.class, new ExternalAdaptInfo(true, 400));
+                .addExternalAdaptInfoOfActivity(BaseActivity.class, new ExternalAdaptInfo(true, 400));
     }
 
 
