@@ -1,9 +1,11 @@
 //apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android'
 apply plugin: 'com.android.library'
 android {
     compileSdkVersion 29
     defaultConfig {
-    //    applicationId "com.key.keylibrary"
+  //      applicationId "com.key.keylibrary"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
@@ -47,4 +49,10 @@ dependencies {
     api files('libs/joda-time-2.5.jar')
     api files('libs/TencentLocationSdk_v7.1.6.1_r67ba7298_20190409_142648.jar')
     api files('libs/sun.misc.BASE64Decoder.jar')
+    api 'me.jessyan:autosize:1.1.2'
+    compile "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
