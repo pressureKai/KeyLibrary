@@ -19,8 +19,6 @@ public class TestActivity extends BaseActivity implements CustomAdapt {
     @Override
     public void initView() {
         findViewById(R.id.jump).setOnClickListener(view -> {
-//            Intent intent = new Intent(TestActivity.this,IndexActivity.class);
-//            startActivity(intent);
         });
     }
 
