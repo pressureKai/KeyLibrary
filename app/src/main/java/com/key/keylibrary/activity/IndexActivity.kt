@@ -1,6 +1,6 @@
 package com.key.keylibrary.activity
 
-import com.AAInfographicsLib.AAChartConfiger.AAChartView
+import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartView
 import com.key.keylibrary.R
 import com.key.keylibrary.base.BaseActivity
 import me.jessyan.autosize.internal.CustomAdapt

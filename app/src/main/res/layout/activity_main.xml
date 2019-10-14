@@ -8,7 +8,7 @@
 
 
 
-    <com.AAInfographicsLib.AAChartConfiger.AAChartView
+    <com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartView
         android:id="@+id/chart_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

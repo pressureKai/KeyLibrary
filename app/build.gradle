@@ -50,9 +50,6 @@ dependencies {
     api files('libs/TencentLocationSdk_v7.1.6.1_r67ba7298_20190409_142648.jar')
     api files('libs/sun.misc.BASE64Decoder.jar')
     api 'me.jessyan:autosize:1.1.2'
-    compile "androidx.core:core-ktx:+"
+    api "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-}
-repositories {
-    mavenCentral()
 }
