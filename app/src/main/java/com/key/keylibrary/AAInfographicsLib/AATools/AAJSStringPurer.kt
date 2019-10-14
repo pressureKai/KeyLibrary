@@ -34,7 +34,7 @@
 
  */
 
-package com.key.keylibrary.AAInfographicsLib.AATools
+package com.AAInfographicsLib.AATools
 object AAJSStringPurer {
 
     fun pureJavaScriptFunctionString(jsFunctionStr: String): String {

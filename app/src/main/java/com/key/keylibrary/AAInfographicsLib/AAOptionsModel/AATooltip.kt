@@ -36,7 +36,7 @@
 
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
-import com.key.keylibrary.AAInfographicsLib.AATools.AAJSStringPurer
+import com.AAInfographicsLib.AATools.AAJSStringPurer
 
 class AATooltip {
     private var backgroundColor: String? = null
