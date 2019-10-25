@@ -8,6 +8,9 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
+
+@Keep
 class AASeries {
     private var borderRadius: Float? = null
     private var marker: AAMarker? = null

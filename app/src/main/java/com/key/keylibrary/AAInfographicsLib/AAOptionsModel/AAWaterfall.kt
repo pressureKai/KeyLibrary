@@ -34,6 +34,10 @@
 
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
+
+import androidx.annotation.Keep
+
+@Keep
 class AAWaterfall {
     var upColor: String? = null
     var color: String? = null

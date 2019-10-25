@@ -7,6 +7,10 @@
  * History:
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
+
+import androidx.annotation.Keep
+
+@Keep
 class AAAnimation {
     private var duration: Int? = null
     private var easing: String? = null

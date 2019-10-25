@@ -7,6 +7,10 @@
  * History:
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
+
+import androidx.annotation.Keep
+
+@Keep
 class AAShadow {
     private var color: String? = null
     private var offsetX: Float? = null

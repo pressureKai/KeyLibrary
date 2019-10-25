@@ -8,6 +8,9 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
+
+@Keep
 class AAPlotOptions {
     var column: AAColumn? = null
     var bar: AABar? = null
@@ -71,7 +74,7 @@ class AAPlotOptions {
     }
 
 }
-
+@Keep
 class AAColumn {
     private var name: String? = null
     private var data: Array<Any>? = null
@@ -158,7 +161,7 @@ class AAColumn {
     }
 
 }
-
+@Keep
 class AABar {
     private var name: String? = null
     private var data: Array<Any>? = null
@@ -245,7 +248,7 @@ class AABar {
     }
 }
 
-
+@Keep
 class AALine {
     var dataLabels: AADataLabels? = null
     
@@ -254,7 +257,7 @@ class AALine {
         return this
     }
 }
-
+@Keep
 class AASpline {
     var dataLabels: AADataLabels? = null
     
@@ -263,7 +266,7 @@ class AASpline {
         return this
     }
 }
-
+@Keep
 class AAArea {
     var dataLabels: AADataLabels? = null
     
@@ -272,7 +275,7 @@ class AAArea {
         return this
     }
 }
-
+@Keep
 class AAAreaspline {
     var dataLabels: AADataLabels? = null
 
@@ -281,7 +284,7 @@ class AAAreaspline {
         return this
     }
 }
-
+@Keep
 class AAPie {
     var dataLabels: AADataLabels? = null
     var size: Float? = null
@@ -339,7 +342,7 @@ class AAPie {
     }
 
 }
-
+@Keep
 class AAColumnrange {
     private var borderRadius: Float? = null
     private var borderWidth: Float? = null
@@ -360,7 +363,7 @@ class AAColumnrange {
         return this
     }
 }
-
+@Keep
 class AAArearange {
     private var dataLabels: AADataLabels? = null
 

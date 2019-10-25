@@ -8,6 +8,9 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
+
+@Keep
 class AADataLabels {
     private var enabled: Boolean? = null
     private var style: AAStyle? = null

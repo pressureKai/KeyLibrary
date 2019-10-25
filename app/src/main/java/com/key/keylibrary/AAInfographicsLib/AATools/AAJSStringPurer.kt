@@ -34,7 +34,11 @@
 
  */
 
-package com.AAInfographicsLib.AATools
+package com.key.keylibrary.AAInfographicsLib.AATools
+
+import androidx.annotation.Keep
+
+@Keep
 object AAJSStringPurer {
 
     fun pureJavaScriptFunctionString(jsFunctionStr: String): String {

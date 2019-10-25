@@ -80,7 +80,6 @@
             iFrame.parentNode.removeChild(iFrame);
             iFrame = null;
         }
-
         function onlyRefreshTheChartDataWithSeries (receivedSeries) {
             var receivedSeriesElementArr = JSON.parse(receivedSeries);
 
@@ -117,12 +116,10 @@
                        }
                    }
         }
-
         function showTheSeriesElementContentWithIndex (elementIndex) {
             var series = aaGlobalChart.series[elementIndex];
             series.show();
         }
-
         function hideTheSeriesElementContentWithIndex(elementIndex) {
             var series = aaGlobalChart.series[elementIndex];
             series.hide();

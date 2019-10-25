@@ -36,8 +36,9 @@
 
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartLineDashStyleType
-
+@Keep
 class AAPlotLinesElement {
 
     private var color: Any? = null

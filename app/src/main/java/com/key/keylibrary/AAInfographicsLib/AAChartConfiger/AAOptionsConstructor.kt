@@ -35,9 +35,10 @@
 
  */
 package com.key.keylibrary.AAInfographicsLib.AAChartConfiger
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAOptionsModel.*
 
-
+@Keep
 object AAOptionsConstructor {
     fun configureChartOptions(
         aaChartModel: AAChartModel

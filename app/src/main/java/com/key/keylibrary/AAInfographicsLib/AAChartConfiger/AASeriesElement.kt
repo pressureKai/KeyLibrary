@@ -32,9 +32,10 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAChartConfiger
 
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAOptionsModel.AADataLabels
 import com.key.keylibrary.AAInfographicsLib.AAOptionsModel.AAMarker
-
+@Keep
 class AASeriesElement {
 
     private var type: String? = null
@@ -143,7 +144,7 @@ class AASeriesElement {
 
 
 }
-
+@Keep
 class AADataElement {
     private var name: String? = null
     private var y: Float? = null
@@ -177,7 +178,7 @@ class AADataElement {
     }
 }
 
-
+@Keep
 class AAShadow {
     private var color: String? = null
     private var offsetX: Float? = null

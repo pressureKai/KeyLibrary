@@ -9,10 +9,11 @@
 
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartAlignType
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartLayoutType
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartVerticalAlignType
-
+@Keep
 class AALegend {
     private var layout: AAChartLayoutType? =
         null //图例数据项的布局。布局类型： "horizontal" 或 "vertical" 即水平布局和垂直布局 默认是：horizontal.
@@ -78,7 +79,7 @@ class AALegend {
     }
 
 }
-
+@Keep
 class AAItemStyle {
     private var color: String? = null
     private var cursor: String? = null

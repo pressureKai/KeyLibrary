@@ -8,6 +8,9 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
+
+@Keep
 class AAChart {
     private var type: String? = null
     private var backgroundColor: Any? = null

@@ -9,8 +9,9 @@
 
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AASeriesElement
-
+@Keep
 class AAOptions {
     var chart: AAChart? = null
     var title: AATitle? = null

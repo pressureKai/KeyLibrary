@@ -26,8 +26,9 @@
 
  */
 package com.key.keylibrary.AAInfographicsLib.AATools
+import androidx.annotation.Keep
 import java.util.HashMap
-
+@Keep
 enum class AALinearGradientDirection {
     ToTop,           //⇧⇧⇧⇧⇧⇧
     ToBottom,        //⇩⇩⇩⇩⇩⇩
@@ -38,7 +39,7 @@ enum class AALinearGradientDirection {
     ToBottomLeft,    //⇙⇙⇙⇙⇙⇙
     ToBottomRight,   //⇘⇘⇘⇘⇘⇘
 }
-
+@Keep
 object AAGradientColor {
     fun oceanBlueColor(): Map<String, Any> {
         return oceanBlueColor(AALinearGradientDirection.ToTop)

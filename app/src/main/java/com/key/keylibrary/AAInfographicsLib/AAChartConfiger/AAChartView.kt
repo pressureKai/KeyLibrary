@@ -44,6 +44,7 @@ import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.annotation.Keep
 import androidx.annotation.RequiresApi
 import com.key.keylibrary.AAInfographicsLib.AAOptionsModel.AAOptions
 
@@ -52,7 +53,7 @@ import com.google.gson.internal.LinkedTreeMap
 import java.sql.DriverManager.println
 
 import java.util.HashMap
-
+@Keep
 class AAMoveOverEventMessageModel {
     var name: String? = null
     var x: Double? = null
@@ -62,7 +63,7 @@ class AAMoveOverEventMessageModel {
     var index: Double? = null
 }
 
-
+@Keep
 class AAChartView : WebView {
 
     var contentWidth: Float? = null

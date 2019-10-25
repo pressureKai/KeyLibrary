@@ -8,9 +8,10 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartAlignType
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartVerticalAlignType
-
+@Keep
 class AATitle {
     private var text: String? = null
     private var style: AAStyle? = null

@@ -27,6 +27,10 @@
  */
 
 package com.key.keylibrary.AAInfographicsLib.AATools
+
+import androidx.annotation.Keep
+
+@Keep
 object AAColor {
 
     fun blackColor(): String {

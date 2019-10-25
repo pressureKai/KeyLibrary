@@ -10,12 +10,10 @@ import me.jessyan.autosize.AutoSizeCompat;
 import me.jessyan.autosize.AutoSizeConfig;
 import me.jessyan.autosize.external.ExternalAdaptInfo;
 import me.jessyan.autosize.onAdaptListener;
-
 /**
  * created by key  on 2019/10/7
  */
 public abstract class BaseActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,48 +22,44 @@ public abstract class BaseActivity extends AppCompatActivity {
         initAuto();
     }
 
-    /**
-     * 添加主布局
-     */
-    public abstract void setContentView();
+        /**
+         * 添加主布局
+         */
+        public abstract void setContentView();
 
-    /**
-     * 初始化布局
-     */
-    public abstract void initView();
-
-
-    public  void initAuto(){
-        AutoSize.initCompatMultiProcess(this);
-        AutoSizeConfig.getInstance()
-                .setCustomFragment(true)
-                .setOnAdaptListener(new onAdaptListener() {
-                    @Override
-                    public void onAdaptBefore(Object target, Activity activity) {
-                        /**
-                         *  适配之前
-                         */
-                    }
-                    @Override
-                    public void onAdaptAfter(Object target, Activity activity) {
-                        /**
-                         * 适配之后
-                         */
-                    }
-                });
-        customAdaptForExternal();
-    }
+        /**
+         * 初始化布局
+         */
+        public abstract void initView();
 
 
-    private void customAdaptForExternal() {
-        AutoSizeConfig.getInstance().getExternalAdaptManager()
-                .addExternalAdaptInfoOfActivity(BaseActivity.class, new ExternalAdaptInfo(true, 400));
-    }
+        public  void initAuto(){
+            AutoSize.initCompatMultiProcess(this);
+            AutoSizeConfig.getInstance()
+                    .setCustomFragment(true)
+                    .setOnAdaptListener(new onAdaptListener() {
+                        @Override
+                        public void onAdaptBefore(Object target, Activity activity) {
+                          //适配之前
+                        }
+                        @Override
+                        public void onAdaptAfter(Object target, Activity activity) {
+                          //适配之后
+                        }
+                    });
+            customAdaptForExternal();
+        }
 
 
-    @Override
-    public Resources getResources() {
-        AutoSizeCompat.autoConvertDensity(super.getResources(), 640, false);
-        return super.getResources();
-    }
+        private void customAdaptForExternal() {
+            AutoSizeConfig.getInstance().getExternalAdaptManager()
+                    .addExternalAdaptInfoOfActivity(BaseActivity.class, new ExternalAdaptInfo(true, 400));
+        }
+
+
+        @Override
+        public Resources getResources() {
+            AutoSizeCompat.autoConvertDensity(super.getResources(), 640, false);
+            return super.getResources();
+        }
 }

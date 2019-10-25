@@ -7,6 +7,10 @@
  * History:
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
+
+import androidx.annotation.Keep
+
+@Keep
 class AAMarker {
     private var radius: Float? = null
     private var symbol: String? = null

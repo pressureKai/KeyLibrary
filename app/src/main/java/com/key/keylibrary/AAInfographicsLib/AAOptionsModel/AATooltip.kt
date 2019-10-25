@@ -36,8 +36,9 @@
 
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
-import com.AAInfographicsLib.AATools.AAJSStringPurer
-
+import androidx.annotation.Keep
+import com.key.keylibrary.AAInfographicsLib.AATools.AAJSStringPurer
+@Keep
 class AATooltip {
     private var backgroundColor: String? = null
     private var borderColor: String? = null

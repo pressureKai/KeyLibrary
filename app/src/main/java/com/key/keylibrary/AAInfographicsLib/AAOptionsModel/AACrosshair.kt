@@ -35,8 +35,9 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartLineDashStyleType
-
+@Keep
 class AACrosshair {
     private var width: Float? = null
     private var color: String? = null

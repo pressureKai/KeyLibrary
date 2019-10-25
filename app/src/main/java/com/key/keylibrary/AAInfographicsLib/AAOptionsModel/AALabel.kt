@@ -7,6 +7,10 @@
  * History:
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
+
+import androidx.annotation.Keep
+
+@Keep
 class AALabel {
     private var text: String? = null
     private var style: Any? = null

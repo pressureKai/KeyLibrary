@@ -35,6 +35,9 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
+
+@Keep
 class AAPlotBandsElement {
     private var from: Float? = null
     private var to: Float? = null

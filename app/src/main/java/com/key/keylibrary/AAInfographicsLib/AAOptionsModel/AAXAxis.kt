@@ -8,6 +8,9 @@
  */
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
+
+@Keep
 class AAXAxis {
     var plotBands: Array<AAPlotBandsElement>? = null
     var plotLines: Array<AAPlotLinesElement>? = null

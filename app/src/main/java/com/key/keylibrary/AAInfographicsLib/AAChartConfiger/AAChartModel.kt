@@ -28,7 +28,9 @@
 
 package com.key.keylibrary.AAInfographicsLib.AAChartConfiger
 
+import androidx.annotation.Keep
 
+@Keep
 enum class AAChartAnimationType(val value :String){
     Linear         ("Linear"),
     EaseInQuad     ("easeInQuad"),
@@ -66,7 +68,7 @@ enum class AAChartAnimationType(val value :String){
     EaseFrom       ("easeFrom"),
     EaseTo         ("easeTo"),
 }
-
+@Keep
 enum class AAChartType(val value: String) {
     Column          ("column"),
     Bar             ("bar"),
@@ -86,19 +88,19 @@ enum class AAChartType(val value: String) {
     Waterfall       ("waterfall"),
     Polygon         ("polygon")
 }
-
+@Keep
 enum class AAChartZoomType(val value: String) {
     X  ("x"),
     Y  ("y"),
     XY ("xy"),
 }
-
+@Keep
 enum class AAChartStackingType(val value: String) {
     False   (""),
     Normal  ("normal"),
     Percent ("percent"),
 }
-
+@Keep
 enum class AAChartSymbolType(val value: String) {
     Circle         ("circle"),
     Square         ("square"),
@@ -106,30 +108,30 @@ enum class AAChartSymbolType(val value: String) {
     Triangle       ("triangle"),
     TriangleDown   ("triangle-down"),
 }
-
+@Keep
 enum class AAChartSymbolStyleType(val value: String) {
     Normal       ("normal"),
     InnerBlank   ("innerBlank"),
     BorderBlank  ("borderBlank"),
 }
-
+@Keep
 enum class AAChartLayoutType(val value: String) {
     Horizontal  ("horizontal"),
     Vertical    ("vertical"),
 }
-
+@Keep
 enum class AAChartAlignType(val value: String) {
     Left     ("left"),
     Center   ("center"),
     Right    ("right"),
 }
-
+@Keep
 enum class AAChartVerticalAlignType(val value: String) {
     Top     ("top"),
     Middle  ("middle"),
     Bottom  ("bottom"),
 }
-
+@Keep
 enum class AAChartLineDashStyleType(val value: String) {
     Solid           ("Solid"),
     ShortDash       ("ShortDash"),
@@ -143,14 +145,14 @@ enum class AAChartLineDashStyleType(val value: String) {
     LongDashDot     ("LongDashDot"),
     LongDashDotDot  ("LongDashDotDot"),
 }
-
+@Keep
 enum class AAChartFontWeightType(val value: String) {
     Thin     ("thin"),
     Regular  ("regular"),
     Bold     ("bold"),
 }
 
-
+@Keep
 class AAChartModel {
 
     var animationType: String? = null          //动画类型

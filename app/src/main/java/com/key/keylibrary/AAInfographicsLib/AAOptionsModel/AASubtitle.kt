@@ -9,8 +9,9 @@
 
 package com.key.keylibrary.AAInfographicsLib.AAOptionsModel
 
+import androidx.annotation.Keep
 import com.key.keylibrary.AAInfographicsLib.AAChartConfiger.AAChartVerticalAlignType
-
+@Keep
 class AASubtitle {
     private var text: String? = null
     private var style: AAStyle? = null
