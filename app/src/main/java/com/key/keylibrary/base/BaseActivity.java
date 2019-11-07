@@ -5,6 +5,10 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.gyf.immersionbar.ImmersionBar;
+import com.key.keylibrary.R;
+
 import me.jessyan.autosize.AutoSize;
 import me.jessyan.autosize.AutoSizeCompat;
 import me.jessyan.autosize.AutoSizeConfig;
@@ -17,6 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setStateBarColor(R.color.white,true);
         setContentView();
         initView();
         initAuto();
@@ -61,5 +66,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         public Resources getResources() {
             AutoSizeCompat.autoConvertDensity(super.getResources(), 640, false);
             return super.getResources();
+        }
+
+
+        public void setStateBarColor(int color,boolean isDark){
+             ImmersionBar.with(this)
+                    .statusBarColor(color)
+                    .statusBarDarkFont(isDark)
+                    .fitsSystemWindows(true)
+                    .init();
         }
 }
