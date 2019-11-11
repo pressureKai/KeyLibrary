@@ -4,19 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <Button
-        android:id="@+id/jump"
+    <com.key.keylibrary.widget.recyclerview.KeyRecyclerView
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:text="jump"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:text="jump"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:text="jump"/>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

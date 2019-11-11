@@ -12,6 +12,5 @@ public class KeyAlertDialog {
          private boolean mFullVertical;
          private int widthParams;
          private int heightParams;
-
     }
 }

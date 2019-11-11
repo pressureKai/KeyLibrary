@@ -174,7 +174,7 @@ public class StateView extends View {
                         parent.removeView(targetView);
                         wrapper.addView(targetView);
                     } else if (parent.getChildCount() > 2) {
-                        throw new IllegalStateException("the view is not refresh layout? view = "
+                        throw new IllegalStateException("the view is not onRefreshListener layout? view = "
                                 + parent.toString());
                     }
                 } else {
