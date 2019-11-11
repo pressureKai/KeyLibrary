@@ -128,15 +128,14 @@ public class BaseRecyclerView extends BaseFrameView {
     }
 
 
-    /**
-     * 设置是否可以滑动
-     * @param enable
-     */
     public void setRefreshEnable(boolean enable) {
         mSwipe.setEnableRefresh(enable);
     }
 
 
+    public void setLoadMoreEnable(boolean enable){
+        mSwipe.setEnableLoadMore(enable);
+    }
     /**
      *  从下到上添加
      * @param stackFromEnd

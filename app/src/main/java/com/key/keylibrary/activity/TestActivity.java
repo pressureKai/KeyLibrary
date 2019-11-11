@@ -1,7 +1,6 @@
 package com.key.keylibrary.activity;
 
 import android.content.Context;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
