@@ -102,7 +102,7 @@ public class RecyclerView extends androidx.recyclerview.widget.RecyclerView {
      *   获取最后一个可见位置
      * @return
      */
-    private int getLastVisiblePosition() {
+    public int getLastVisiblePosition() {
         if (layoutManager instanceof LinearLayoutManager) {
             return ((LinearLayoutManager) layoutManager).findLastVisibleItemPosition();
         } else if (layoutManager instanceof StaggeredGridLayoutManager) {
