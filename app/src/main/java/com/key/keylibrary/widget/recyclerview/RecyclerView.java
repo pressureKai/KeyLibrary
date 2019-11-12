@@ -239,7 +239,7 @@ public class RecyclerView extends androidx.recyclerview.widget.RecyclerView {
 
 
     /**
-     *  RecyclerView滑动到顶部
+     *  滑动到指定位置
      * @param position
      */
     public void goToPosition(int position) {
