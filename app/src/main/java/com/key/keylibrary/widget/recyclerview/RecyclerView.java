@@ -129,7 +129,7 @@ public class RecyclerView extends androidx.recyclerview.widget.RecyclerView {
             if (lastPositions == null) {
                 lastPositions = new int[staggeredGridLayoutManager.getSpanCount()];
             }
-            staggeredGridLayoutManager.findLastVisibleItemPositions(lastPositions);
+            staggeredGridLayoutManager.findFirstVisibleItemPositions(lastPositions);
             return findMin(lastPositions);
         }
         return 0;
