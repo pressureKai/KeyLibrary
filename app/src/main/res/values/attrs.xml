@@ -8,4 +8,12 @@
     </declare-styleable>
 
 
+    <declare-styleable name="Toolbar">
+        <attr name="back_icon" format="integer"/>
+        <attr name="left_title" format="string"/>
+        <attr name="center_title" format="string"/>
+        <attr name="left_title_show" format="boolean"/>
+        <attr name="center_title_show" format="boolean"/>
+        <attr name="right_view_show" format="boolean"/>
+    </declare-styleable>
 </resources>
