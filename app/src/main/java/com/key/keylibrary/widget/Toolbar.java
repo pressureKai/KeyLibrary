@@ -185,7 +185,7 @@ public class Toolbar extends LinearLayout {
         this.onBackClickListener = onBackClickListener;
     }
 
-    interface OnBackClickListener{
+    public interface OnBackClickListener{
          void onBackClick();
     }
 }
