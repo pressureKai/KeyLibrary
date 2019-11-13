@@ -130,6 +130,27 @@ public class Toolbar extends LinearLayout {
     }
 
 
+    public void setLeftTitleShow(boolean show){
+        if(mLeftTitle != null){
+            if(show){
+                mLeftTitle.setVisibility(View.VISIBLE);
+            }else{
+                mLeftTitle.setVisibility(View.GONE);
+            }
+        }
+    }
+    
+
+    public void setCenterTitleShow(boolean show){
+         if(mCenterTitle != null){
+             if(show){
+                 mCenterTitle.setVisibility(View.VISIBLE);
+             }else{
+                 mCenterTitle.setVisibility(View.GONE);
+             }
+         }
+    }
+
     public void setRootBackgroundColor(int colorId,int slectorId){
         if(mRoot != null){
             mRoot.setBackgroundColor(getResources().getColor(colorId));
