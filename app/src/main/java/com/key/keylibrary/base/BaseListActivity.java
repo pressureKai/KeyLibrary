@@ -10,8 +10,8 @@ import me.jessyan.autosize.internal.CustomAdapt;
  * created by key  on 2019/11/12
  */
 public class BaseListActivity extends BaseActivity implements CustomAdapt {
-    private Toolbar mToolbar;
-    private KeyRecyclerView mList;
+    protected Toolbar mToolbar;
+    protected KeyRecyclerView mList;
     @Override
     public void setContentView() {
         setContentView(R.layout.activity_base_list);
