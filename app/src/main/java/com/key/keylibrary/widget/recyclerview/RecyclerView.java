@@ -353,18 +353,18 @@ public class RecyclerView extends androidx.recyclerview.widget.RecyclerView {
                             if(mVelocityTracker.getXVelocity() < -SNAP_VELOCITY){
                                 mScroller.startScroll(scrollX,0,mMenuViewWidth - scrollX,0,Math.abs(mMenuViewWidth - scrollX));
                                 if(onSlideListener != null){
-                                    onSlideListener.onSlide(scrollX,-scrollX,true,false);
+                                    onSlideListener.onSlide(scrollX,mPosition,true,false);
                                 }
                             }else if(mVelocityTracker.getXVelocity() > SNAP_VELOCITY){
                                 mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(scrollX));
                                 if(onSlideListener != null){
-                                    onSlideListener.onSlide(scrollX,-scrollX,false,true);
+                                    onSlideListener.onSlide(scrollX,mPosition,false,true);
                                 }
                             }else if(scrollX >= mMenuViewWidth/3){
 //                                if(lastScrollX- scrollX > 0){
                                     mScroller.startScroll(scrollX, 0, mMenuViewWidth - scrollX, 0, Math.abs(mMenuViewWidth - scrollX));
                                     if(onSlideListener != null){
-                                        onSlideListener.onSlide(scrollX,-scrollX,true,false);
+                                        onSlideListener.onSlide(scrollX,mPosition,true,false);
                                     }
 //                                }else{
 //                                    mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(mMenuViewWidth - scrollX));
