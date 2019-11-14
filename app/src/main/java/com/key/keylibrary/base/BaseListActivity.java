@@ -23,6 +23,4 @@ public abstract class BaseListActivity extends BaseActivity implements CustomAda
     public void initView() {
         setStateBarColor(R.color.blue,false);
     }
-
-
 }
