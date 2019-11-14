@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import com.key.keylibrary.R;
 
 /**
@@ -139,7 +138,7 @@ public class Toolbar extends LinearLayout {
             }
         }
     }
-    
+
 
     public void setCenterTitleShow(boolean show){
          if(mCenterTitle != null){

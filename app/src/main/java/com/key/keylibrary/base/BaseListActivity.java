@@ -9,7 +9,7 @@ import me.jessyan.autosize.internal.CustomAdapt;
 /**
  * created by key  on 2019/11/12
  */
-public class BaseListActivity extends BaseActivity implements CustomAdapt {
+public abstract class BaseListActivity extends BaseActivity implements CustomAdapt {
     protected Toolbar mToolbar;
     protected KeyRecyclerView mList;
     @Override
@@ -22,16 +22,6 @@ public class BaseListActivity extends BaseActivity implements CustomAdapt {
     @Override
     public void initView() {
         setStateBarColor(R.color.blue,false);
-    }
-
-    @Override
-    public boolean isBaseOnWidth() {
-        return false;
-    }
-
-    @Override
-    public float getSizeInDp() {
-        return 640f;
     }
 
 
