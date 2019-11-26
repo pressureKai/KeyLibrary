@@ -20,7 +20,7 @@ class KeyRecyclerView<K> : BaseRecyclerView {
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
 
-    fun setAdapter(adapter: BaseAdapter<K>?) {
+    fun setMineAdapter(adapter: BaseAdapter<K>?) {
         super.setAdapter(adapter)
         mAdapterBase = adapter
         if (mAdapterBase!!.list == null) {
