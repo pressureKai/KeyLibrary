@@ -36,7 +36,7 @@ public class TestActivity extends BaseActivity implements CustomAdapt {
             mKeyRecyclerView.handleData(mList);
         });
         mKeyRecyclerView.getmRecyclerView().initList(3);
-        mKeyRecyclerView.setMineAdapter(testAdapter);
+        mKeyRecyclerView.setAdapter(testAdapter);
         mKeyRecyclerView.handleData(mList);
         mKeyRecyclerView.setOnRefreshListener(refreshLayout -> {
                 mKeyRecyclerView.getList().add(mKeyRecyclerView.getList().size() + "");

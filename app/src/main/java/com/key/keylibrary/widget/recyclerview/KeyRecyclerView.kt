@@ -20,6 +20,17 @@ class KeyRecyclerView<K> : BaseRecyclerView {
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
 
+    fun setAdapter(adapter: BaseAdapter<K>?) {
+        super.setAdapter(adapter)
+        mAdapterBase = adapter
+        if (mAdapterBase!!.list == null) {
+            mList = ArrayList()
+            mAdapterBase!!.setList(mList)
+        } else {
+            mList = mAdapterBase!!.list
+        }
+    }
+
     fun setMineAdapter(adapter: BaseAdapter<K>?) {
         super.setAdapter(adapter)
         mAdapterBase = adapter
@@ -30,6 +41,8 @@ class KeyRecyclerView<K> : BaseRecyclerView {
             mList = mAdapterBase!!.list
         }
     }
+
+
 
     fun handleData(list: MutableList<K>?) {
         var list = list
