@@ -9,8 +9,8 @@ import me.jessyan.autosize.internal.CustomAdapt
  * created by key  on 2019/11/12
  */
 abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
-    protected var mToolbar: Toolbar? = null
-    protected var mList: KeyRecyclerView<T>? = null
+    public var mToolbar: Toolbar? = null
+    public var mList: KeyRecyclerView<T>? = null
     override fun setLayoutId(): Int {
         return R.layout.activity_base_list
     }
