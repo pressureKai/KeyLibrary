@@ -10,7 +10,7 @@ import me.jessyan.autosize.internal.CustomAdapt
  */
 abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
     public var mToolbar: Toolbar? = null
-    public var mList: KeyRecyclerView<T>? = null
+    public var mListView: KeyRecyclerView<T>? = null
     override fun setLayoutId(): Int {
         return R.layout.activity_base_list
     }
@@ -18,6 +18,6 @@ abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
     override fun initView() {
         setStateBarColor(R.color.blue, false)
         mToolbar = findViewById(R.id.toolbar)
-        mList = findViewById(R.id.list)
+        mListView = findViewById<KeyRecyclerView<T>>(R.id.list)
     }
 }
