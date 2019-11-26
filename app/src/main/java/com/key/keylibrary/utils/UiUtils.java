@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+import static com.key.keylibrary.base.GlobalApplication.getContext;
+
 /**
  * created by key  on 2019/11/11
  */
@@ -32,5 +34,10 @@ public class UiUtils {
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         int widthPixels = displayMetrics.widthPixels;
         return widthPixels;
+    }
+
+    public static int dip2px(float dip) {
+        float density = getContext().getResources().getDisplayMetrics().density;
+        return (int) (dip * density + 0.5f);
     }
 }

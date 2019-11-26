@@ -37,7 +37,7 @@
                         var message = {
                             name: this.series.name,
                             y :this.y,
-                            x: this.x,
+                            x :this.x,
                             category:this.category,
                             offset:{plotX:this.plotX,plotY:this.plotY},
                             index: this.index,

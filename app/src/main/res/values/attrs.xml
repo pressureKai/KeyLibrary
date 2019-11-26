@@ -16,4 +16,11 @@
         <attr name="center_title_show" format="boolean"/>
         <attr name="right_view_show" format="boolean"/>
     </declare-styleable>
+
+
+    <declare-styleable name="EditTextView">
+        <attr name="edit_hint" format="string" />
+        <attr name="edit_clickable" format="boolean"/>
+        <attr name="edit_hint_size" format="integer"/>
+    </declare-styleable>
 </resources>

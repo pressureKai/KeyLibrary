@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import com.key.keylibrary.R;
 import com.key.keylibrary.base.BaseActivity;
+import com.key.keylibrary.bean.BusMessage;
 import com.key.keylibrary.widget.recyclerview.KeyRecyclerView;
 import com.key.keylibrary.widget.recyclerview.base.BaseRecyclerViewAdapter;
 import java.util.ArrayList;
@@ -17,10 +18,6 @@ import me.jessyan.autosize.internal.CustomAdapt;
 public class TestActivity extends BaseActivity implements CustomAdapt {
     private KeyRecyclerView mKeyRecyclerView;
     private  ArrayList<String> mList;
-    @Override
-    public void setContentView() {
-        setContentView(R.layout.activity_test);
-    }
 
     @Override
     public void initView() {
@@ -65,6 +62,16 @@ public class TestActivity extends BaseActivity implements CustomAdapt {
             }
         });
 
+    }
+
+    @Override
+    public void receiveMessage(BusMessage busMessage) {
+
+    }
+
+    @Override
+    public int setLayoutId() {
+        return R.layout.activity_test;
     }
 
     @Override

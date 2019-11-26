@@ -13,4 +13,6 @@
     <color name="less_blue">#CC0B588F</color>
     <color name="black">#000000</color>
     <color name="divider">#f9f9f9</color>
+    <color name="trans_color">#01000000</color>
+    <color name="red">#C30D23</color>
 </resources>
