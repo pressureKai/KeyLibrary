@@ -12,6 +12,7 @@ import android.text.method.DigitsKeyListener;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -85,6 +86,33 @@ public class EditTextView extends ConstraintLayout {
              if(!TextUtils.isEmpty(edit_hint_size)){
                  mHintSize = Integer.valueOf(edit_hint_size);
                  setHintSizeAndColor(context.getResources().getColor(android.R.color.darker_gray));
+             }
+
+             String edit_type = attrs.getAttributeValue(NAMESPACE, "edit_type");
+             if(!TextUtils.isEmpty(edit_type)){
+                 String last = edit_type.substring(edit_type.length() - 1, edit_type.length());
+                 switch (last){
+                     case "0":{
+                         Log.e("TYPE","0");
+                         break;
+                     }
+                     case "1":{
+                         Log.e("TYPE","1");
+                         break;
+                     }
+                     case "2":{
+                         Log.e("TYPE","2");
+                         break;
+                     }
+                     case "3":{
+                         Log.e("TYPE","3");
+                         break;
+                     }
+                     case "4":{
+                         Log.e("TYPE","4");
+                         break;
+                     }
+                 }
              }
          }
          mRemind.setText(customHint);

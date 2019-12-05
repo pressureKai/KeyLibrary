@@ -19,6 +19,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           app:edit_hint_size="13"
+          app:edit_type="letter"
           app:edit_hint="账号"/>
 
 
@@ -28,6 +29,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           app:edit_hint_size="13"
+          app:edit_type="phone"
           app:edit_hint="密码"/>
       <Button
           android:id="@+id/submit"

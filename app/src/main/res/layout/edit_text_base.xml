@@ -11,7 +11,8 @@
 
     <TextView
         android:layout_margin="8dp"
-        android:paddingLeft="3dp"
+        android:paddingLeft="5dp"
+        android:textSize="18dp"
         android:id="@+id/ed_hint"
         android:text="@string/app_name"
         android:textColor="@color/black"
@@ -25,7 +26,7 @@
         android:layout_margin="12dp"
         android:id="@+id/ed_content"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:background="@drawable/edit_text_base_bg"
         android:clickable="true"
         android:enabled="true"
@@ -33,9 +34,12 @@
         android:lines="1"
         android:gravity="center_vertical"
         android:paddingLeft="5dp"
+        android:paddingRight="25dp"
         android:paddingBottom="3dp"
         android:textCursorDrawable="@drawable/edit_text_cursor_bg"
         android:textSize="15sp"
+        android:maxLines="1"
+        android:minLines="1"
         android:windowSoftInputMode="adjustPan"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_hint" />
@@ -47,8 +51,8 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:background="@mipmap/clear_edit_text"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="6dp"
         app:layout_constraintBottom_toBottomOf="@+id/ed_content"
         app:layout_constraintRight_toRightOf="parent" />
 
@@ -58,13 +62,9 @@
         android:visibility="gone"
         android:id="@+id/unable_click"
         android:background="@color/trans_color"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:paddingTop="26dp"
-        android:paddingBottom="26dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="30dp"
         android:orientation="horizontal">
 
 

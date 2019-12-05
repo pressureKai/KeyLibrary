@@ -5,19 +5,18 @@ import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import butterknife.ButterKnife
+import butterknife.Unbinder
 import com.gyf.immersionbar.ImmersionBar
 import com.key.keylibrary.R
 import com.key.keylibrary.bean.BusMessage
-import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
-import butterknife.ButterKnife
-import butterknife.Unbinder
 import me.jessyan.autosize.AutoSize
 import me.jessyan.autosize.AutoSizeCompat
 import me.jessyan.autosize.AutoSizeConfig
-import me.jessyan.autosize.external.ExternalAdaptInfo
 import me.jessyan.autosize.onAdaptListener
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 /**
  * created by key  on 2019/10/7
@@ -27,7 +26,8 @@ abstract class BaseActivity : AppCompatActivity() {
     protected var handler = Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setStateBarColor(R.color.white, true)
+        initSystemBar()
+       // setStateBarColor(R.color.white, true)
         setContentView(setLayoutId())
         unbinder = ButterKnife.bind(this)
         registerEventBus(this)
@@ -124,5 +124,13 @@ abstract class BaseActivity : AppCompatActivity() {
     fun sendBusMessage(busMessage: BusMessage<Any>){
         EventBus.getDefault().postSticky(busMessage)
     }
-
+    protected open fun initSystemBar() {
+        ImmersionBar.with(this).navigationBarColor(R.color.white)
+                .autoDarkModeEnable(true)
+                .statusBarDarkFont(true, 0.7f)
+                .fitsSystemWindows(fitsSystemWindows()).init()
+    }
+    protected open fun fitsSystemWindows(): Boolean {
+        return false
+    }
 }

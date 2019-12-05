@@ -22,5 +22,13 @@
         <attr name="edit_hint" format="string" />
         <attr name="edit_clickable" format="boolean"/>
         <attr name="edit_hint_size" format="integer"/>
+        <attr name="edit_type">
+              <flag name="phone" value="0"/>
+              <flag name="password" value="1"/>
+              <flag name="number" value="2"/>
+              <flag name="number_no_point" value="3"/>
+              <flag name="letter" value="4"/>
+              <flag name="card" value="5"/>
+        </attr>
     </declare-styleable>
 </resources>
