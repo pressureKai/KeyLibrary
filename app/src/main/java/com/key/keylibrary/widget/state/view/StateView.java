@@ -1,4 +1,4 @@
-package com.key.keylibrary.view.state_view;
+package com.key.keylibrary.widget.state.view;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

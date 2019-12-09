@@ -1,4 +1,4 @@
-package com.key.keylibrary.view.state_view;
+package com.key.keylibrary.widget.state.view;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,21 +10,6 @@ import com.key.keylibrary.R;
 
 class Injector {
 
-    /**
-     * When viewParent is ConstraintLayout
-     * Change other view's Constraint to root, if the origin Constraint is parent
-     * <p>
-     * Solve the ClassCastException: constraint-layout version 1.1.3
-     * java.lang.ClassCastException: android.widget.FrameLayout$LayoutParams cannot be cast to android.support.constraint.ConstraintLayout$LayoutParams
-     * at {@link ConstraintLayout#getTargetWidget(int)}
-     * at {@link ConstraintLayout#setChildrenConstraints()}
-     * at {@link ConstraintLayout#updateHierarchy()}
-     * at {@link ConstraintLayout#onMeasure(int, int)}
-     *
-     * @param viewParent   injectView's parent
-     * @param root         wrapper view, replace injectView
-     * @param injectViewId injectView's Id
-     */
     public static void changeChildrenConstraints(ViewGroup viewParent, FrameLayout root, int injectViewId) {
         if (viewParent instanceof ConstraintLayout) {
             int rootId = R.id.root_id;

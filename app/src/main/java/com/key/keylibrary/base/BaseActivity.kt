@@ -1,15 +1,18 @@
 package com.key.keylibrary.base
 
 import android.app.Activity
+import android.app.UiAutomation
 import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import butterknife.ButterKnife
 import butterknife.Unbinder
 import com.gyf.immersionbar.ImmersionBar
 import com.key.keylibrary.R
 import com.key.keylibrary.bean.BusMessage
+import com.key.keylibrary.utils.UiUtils
 import me.jessyan.autosize.AutoSize
 import me.jessyan.autosize.AutoSizeCompat
 import me.jessyan.autosize.AutoSizeConfig
@@ -58,11 +61,13 @@ abstract class BaseActivity : AppCompatActivity() {
         AutoSizeConfig.getInstance()
                 .setCustomFragment(true).onAdaptListener = object : onAdaptListener {
             override fun onAdaptBefore(target: Any, activity: Activity) {
-                //适配之前
+                Log.e("Auto","Auto Before Height :"  +  UiUtils.getScreenHeight(activity))
+                Log.e("Auto","Auto Before Width :"  +  UiUtils.getScreenWidth(activity))
             }
 
             override fun onAdaptAfter(target: Any, activity: Activity) {
-                //适配之后
+                Log.e("Auto","Auto Before Height :"  +  UiUtils.getScreenHeight(activity))
+                Log.e("Auto","Auto Before Width :"  +  UiUtils.getScreenWidth(activity))
             }
         }
     }
