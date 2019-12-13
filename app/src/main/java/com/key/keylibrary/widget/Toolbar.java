@@ -150,12 +150,12 @@ public class Toolbar extends LinearLayout {
          }
     }
 
-    public void setRootBackgroundColor(int colorId,int slectorId){
+    public void setRootBackgroundColor(int colorId,int selectorId){
         if(mRoot != null){
             mRoot.setBackgroundColor(getResources().getColor(colorId));
         }
         if(mBack != null){
-            mBack.setBackgroundResource(slectorId);
+            mBack.setBackgroundResource(selectorId);
         }
     }
 

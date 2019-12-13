@@ -76,7 +76,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
 
     override fun getResources(): Resources {
-        AutoSizeCompat.autoConvertDensity(super.getResources(), 840f, false)
+        AutoSizeCompat.autoConvertDensity(super.getResources(), 384f, true)
         return super.getResources()
     }
 

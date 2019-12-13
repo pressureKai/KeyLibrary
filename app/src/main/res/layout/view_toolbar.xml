@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="LeftTitle"
-        android:textSize="16dp"
+        android:textSize="23sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/back"/>
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="CenterTitle"
-        android:textSize="16dp"
+        android:textSize="23sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
