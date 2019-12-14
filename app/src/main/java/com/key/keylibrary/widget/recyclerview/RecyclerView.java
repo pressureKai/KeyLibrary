@@ -26,7 +26,7 @@ public class RecyclerView extends androidx.recyclerview.widget.RecyclerView {
     public static final int HORIZONTAL = StaggeredGridLayoutManager.HORIZONTAL;
     private int mWidthMeasureSpec;
     private int mHeightMeasureSpec;
-    public static boolean shouldLocalInvalidate = false;
+    public  boolean shouldLocalInvalidate = false;
     private LayoutManager layoutManager;
     private Context mContext;
     private int[] lastPositions;
@@ -524,4 +524,7 @@ public class RecyclerView extends androidx.recyclerview.widget.RecyclerView {
     public void setOnSlideListener(OnSlideListener onSlideListener) {
         this.onSlideListener = onSlideListener;
     }
+
+
+
 }
