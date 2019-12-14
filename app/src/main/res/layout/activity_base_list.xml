@@ -1,38 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <com.key.keylibrary.widget.Toolbar
         android:id="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:left_title_show="false"
         app:center_title_show="false"/>
 
 
-
-
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        android:id="@+id/refresh_out"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:background="@color/blue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.key.keylibrary.widget.recyclerview.KeyRecyclerView
+    <com.key.keylibrary.widget.recyclerview.KeyRecyclerView
                 android:id="@+id/list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+                android:layout_height="match_parent"/>
 
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
