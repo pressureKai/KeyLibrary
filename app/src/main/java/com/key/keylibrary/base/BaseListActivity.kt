@@ -22,6 +22,9 @@ abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
         setStateBarColor(R.color.blue, false)
         mToolbar = findViewById(R.id.toolbar)
         mListView = findViewById(R.id.list)
+        val layoutParams = mListView!!.layoutParams
+        layoutParams.height = UiUtils.getScreenHeight(this) - (UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this))
+        mListView!!.layoutParams = layoutParams
         val i = UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this)
         mListView!!.setPadding(0,0,0, i)
     }
