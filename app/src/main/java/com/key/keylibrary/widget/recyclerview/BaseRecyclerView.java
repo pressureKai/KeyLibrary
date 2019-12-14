@@ -200,4 +200,9 @@ public class BaseRecyclerView extends BaseFrameView {
     public void setOnLoadMoreListener(OnLoadMoreListener onLoadMoreListener) {
         this.onLoadMoreListener = onLoadMoreListener;
     }
+
+
+    public SmartRefreshLayout getRefreshLayout() {
+        return mSwipe;
+    }
 }
