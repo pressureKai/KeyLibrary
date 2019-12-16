@@ -2,25 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <com.key.keylibrary.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         app:left_title_show="false"
         app:center_title_show="false"/>
 
 
+
+
+
     <com.key.keylibrary.widget.recyclerview.KeyRecyclerView
                 android:id="@+id/list"
-                android:background="@color/blue"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="9"/>
+                android:layout_height="wrap_content"/>
 
 
 
