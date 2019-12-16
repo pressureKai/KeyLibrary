@@ -1,11 +1,9 @@
 package com.key.keylibrary.base
 
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.key.keylibrary.R
 import com.key.keylibrary.utils.UiUtils
 import com.key.keylibrary.widget.Toolbar
 import com.key.keylibrary.widget.recyclerview.KeyRecyclerView
-import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import me.jessyan.autosize.internal.CustomAdapt
 
 /**
@@ -23,7 +21,8 @@ abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
         mToolbar = findViewById(R.id.toolbar)
         mListView = findViewById(R.id.list)
         val layoutParams = mListView!!.layoutParams
-        layoutParams.height = UiUtils.getScreenHeight(this) - (UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this))
+        layoutParams.height = UiUtils.getScreenHeight(this) -
+                (UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this))
         mListView!!.layoutParams = layoutParams
         val i = UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this)
         mListView!!.setPadding(0,0,0, i)
