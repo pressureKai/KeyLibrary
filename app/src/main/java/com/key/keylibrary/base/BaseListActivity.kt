@@ -26,8 +26,8 @@ abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
         layoutParams.height = UiUtils.getScreenHeight(this) -
                 (UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this))
         mListView!!.layoutParams = layoutParams
-        val i = UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this)
-        mListView!!.setPadding(0,0,0, i)
+//        val i = UiUtils.measureView(mToolbar)[1] + UiUtils.getStateBar(this)
+//        mListView!!.setPadding(0,0,0, i)
     }
 
 
