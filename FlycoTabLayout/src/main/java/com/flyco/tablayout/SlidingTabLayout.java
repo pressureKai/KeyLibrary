@@ -226,6 +226,7 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
     }
 
     /** 更新数据 */
+    private boolean showIcon = false;
     public void notifyDataSetChanged() {
         mTabsContainer.removeAllViews();
         this.mTabCount = mTitles == null ? mViewPager.getAdapter().getCount() : mTitles.size();
@@ -233,12 +234,17 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
         for (int i = 0; i < mTabCount; i++) {
             tabView = View.inflate(mContext, R.layout.layout_tab, null);
             CharSequence pageTitle = mTitles == null ? mViewPager.getAdapter().getPageTitle(i) : mTitles.get(i);
-            int res = ((FragmentAdapter) mViewPager.getAdapter()).getIcon(i);
-            if(res != -1){
-                addTab(i, pageTitle.toString(), res,tabView);
+            if(showIcon){
+                int res = ((FragmentAdapter) mViewPager.getAdapter()).getIcon(i);
+                if(res != -1){
+                    addTab(i, pageTitle.toString(), res,tabView);
+                }else{
+                    addTab(i, pageTitle.toString(), tabView);
+                }
             }else{
                 addTab(i, pageTitle.toString(), tabView);
             }
+
 
         }
 
@@ -975,5 +981,10 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
     protected int sp2px(float sp) {
         final float scale = this.mContext.getResources().getDisplayMetrics().scaledDensity;
         return (int) (sp * scale + 0.5f);
+    }
+
+
+    public void setShowIcon(boolean showIcon){
+        this.showIcon = showIcon;
     }
 }
