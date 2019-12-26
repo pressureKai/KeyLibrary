@@ -17,6 +17,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -28,6 +29,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.flyco.tablayout.listener.OnTabSelectListener;
+import com.flyco.tablayout.utils.FragmentAdapter;
 import com.flyco.tablayout.utils.UnreadMsgUtils;
 import com.flyco.tablayout.widget.MsgView;
 
@@ -231,7 +233,13 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
         for (int i = 0; i < mTabCount; i++) {
             tabView = View.inflate(mContext, R.layout.layout_tab, null);
             CharSequence pageTitle = mTitles == null ? mViewPager.getAdapter().getPageTitle(i) : mTitles.get(i);
-            addTab(i, pageTitle.toString(), tabView);
+            int res = ((FragmentAdapter) mViewPager.getAdapter()).getIcon(i);
+            if(res != -1){
+                addTab(i, pageTitle.toString(), res,tabView);
+            }else{
+                addTab(i, pageTitle.toString(), tabView);
+            }
+
         }
 
         updateTabStyles();
@@ -253,9 +261,11 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
     /** 创建并添加tab */
     private void addTab(final int position, String title, View tabView) {
         TextView tv_tab_title = (TextView) tabView.findViewById(R.id.tv_tab_title);
+
         if (tv_tab_title != null) {
             if (title != null) tv_tab_title.setText(title);
         }
+
 
         tabView.setOnClickListener(new OnClickListener() {
             @Override
@@ -292,6 +302,56 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
         mTabsContainer.addView(tabView, position, lp_tab);
     }
 
+
+
+    /**
+     * 创建并添加tab
+     */
+    private void addTab(final int position, String title, int iconRes, View tabView) {
+        TextView tv_tab_title = (TextView) tabView.findViewById(R.id.tv_tab_title);
+        ImageView tv_tab_icon = (ImageView) tabView.findViewById(R.id.icon);
+        if (tv_tab_title != null) {
+            if (title != null) tv_tab_title.setText(title);
+        }
+        if (iconRes != -1){
+            tv_tab_icon.setImageResource(iconRes);
+
+        }
+
+        tabView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = mTabsContainer.indexOfChild(v);
+                if (position != -1) {
+                    if (mViewPager.getCurrentItem() != position) {
+                        if (mSnapOnTabClick) {
+                            mViewPager.setCurrentItem(position, false);
+                        } else {
+                            mViewPager.setCurrentItem(position);
+                        }
+
+                        if (mListener != null) {
+                            mListener.onTabSelect(position);
+                        }
+                    } else {
+                        if (mListener != null) {
+                            mListener.onTabReselect(position);
+                        }
+                    }
+                }
+            }
+        });
+
+        /** 每一个Tab的布局参数 */
+        LinearLayout.LayoutParams lp_tab = mTabSpaceEqual ?
+                new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1.0f) :
+                new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        if (mTabWidth > 0) {
+            lp_tab = new LinearLayout.LayoutParams((int) mTabWidth, LayoutParams.MATCH_PARENT);
+        }
+
+        mTabsContainer.addView(tabView, position, lp_tab);
+    }
     private void updateTabStyles() {
         for (int i = 0; i < mTabCount; i++) {
             View v = mTabsContainer.getChildAt(i);

@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:clipToPadding="false">
+    android:clipToPadding="false"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
 
     <TextView
         android:id="@+id/tv_tab_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:singleLine="true"/>
+        android:layout_marginStart="8dp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.flyco.tablayout.widget.MsgView
         android:id="@+id/rtv_msg_tip"
-        xmlns:mv="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="#ffffff"
-        android:textSize="11.5sp"
-        android:visibility="gone"
-        mv:mv_backgroundColor="#FD481F"
-        mv:mv_isRadiusHalfHeight="true"
-        mv:mv_strokeColor="#ffffff"
-        mv:mv_strokeWidth="1dp"/>
+        android:textColor="#FD481F"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv_tab_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_tab_title"
+        app:mv_backgroundColor="#FD481F"
+        app:mv_isRadiusHalfHeight="true"
+        app:mv_strokeColor="#ffffff"
+        app:mv_strokeWidth="1dp" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
