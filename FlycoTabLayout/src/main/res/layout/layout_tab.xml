@@ -27,10 +27,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.flyco.tablayout.widget.MsgView
-        app:layout_constraintTop_toTopOf="@+id/tv_tab_title"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tab_title"
         app:layout_constraintRight_toRightOf="@+id/tv_tab_title"
         android:id="@+id/rtv_msg_tip"
-        android:layout_marginLeft="3dp"
+        android:layout_marginLeft="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
