@@ -25,6 +25,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:support-v4:25.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }
 
 //def siteUrl = 'https://github.com/H07000223'  // 项目的主页
