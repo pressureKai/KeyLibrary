@@ -65,7 +65,7 @@ public class CustomAlertDialog {
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         window.getDecorView().setPadding(dip2px(context, (float) horizontalPadding), dip2px(context, (float) verticalPadding),
                 dip2px(context, (float) horizontalPadding),dip2px(context, (float) verticalPadding));
-        if (openAnimation) {
+        if (!openAnimation) {
             window.setWindowAnimations(R.style.dialog_style);
         }
         WindowManager.LayoutParams lp = window.getAttributes();
