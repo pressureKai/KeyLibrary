@@ -104,7 +104,10 @@ class AAChartView : WebView {
         this.contentHeight = 350f
         //        //设置WebView支持JavaScript(这一句是十分关键的一句)
         this.settings.javaScriptEnabled = true
+
+        this.settings.builtInZoomControls = false
         this.settings.setSupportZoom(false)
+        this.settings.displayZoomControls = false
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //            this.setWebContentsDebuggingEnabled(true)
 //        }
