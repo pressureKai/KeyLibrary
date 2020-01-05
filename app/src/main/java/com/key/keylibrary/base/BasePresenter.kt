@@ -1,5 +1,4 @@
 package com.key.keylibrary.base
-
 import java.lang.ref.WeakReference
 
 /**
@@ -9,7 +8,7 @@ open class BasePresenter<V> : IPresenter<V> {
     /**
      *弱引用
      */
-    protected var iView: WeakReference<in V>? = null
+    var iView: WeakReference<in V>? = null
     override fun register(view: V) {
         iView = WeakReference(view)
     }
