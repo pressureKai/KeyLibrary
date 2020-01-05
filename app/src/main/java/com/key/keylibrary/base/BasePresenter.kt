@@ -15,7 +15,6 @@ open class BasePresenter<V> : IPresenter<V> {
     /**
      *  view 表示的是当前被主持的对象 可以是Activity或者是Fragment
      */
-
     override fun unRegister() {
         iView?.clear()
     }

@@ -12,10 +12,10 @@ import java.util.List;
  * created by key  on 2019/1/6
  */
 public class GlobalApplication extends LitePalApplication {
-    private static Context context;
-    private static Handler handler;
-    private static int mainThreadId;
-    private List<Activity> aList;
+    public static Context context;
+    public static Handler handler;
+    public static int mainThreadId;
+    public List<Activity> aList;
 
     @Override
     public void onCreate() {
