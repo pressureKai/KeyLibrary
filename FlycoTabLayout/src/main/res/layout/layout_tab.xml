@@ -49,8 +49,8 @@
         app:layout_constraintRight_toRightOf="@+id/rtv_msg_tip"
         android:paddingTop="5dp"
         android:layout_width="1dp"
-        android:layout_marginLeft="10dp"
-        android:background="@color/divider"
+        android:paddingLeft="10dp"
+        android:background="@android:color/darker_gray"
         android:paddingBottom="5dp"
         android:layout_height="20dp"/>
 
