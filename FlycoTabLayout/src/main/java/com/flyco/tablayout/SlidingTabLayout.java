@@ -35,6 +35,7 @@ import com.flyco.tablayout.widget.MsgView;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /** 滑动TabLayout,对于ViewPager的依赖性强 */
 public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.OnPageChangeListener {
@@ -225,12 +226,22 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
 
     /** 更新数据 */
     private boolean showIcon = false;
+    private List<TextView> rightDividers;
     public void notifyDataSetChanged() {
         mTabsContainer.removeAllViews();
         this.mTabCount = mTitles == null ? mViewPager.getAdapter().getCount() : mTitles.size();
         View tabView;
+        rightDividers = new ArrayList<>();
         for (int i = 0; i < mTabCount; i++) {
             tabView = View.inflate(mContext, R.layout.layout_tab, null);
+            if(i == mTabCount -1){
+                TextView rightDivider = (TextView) tabView.findViewById(R.id.right_divider);
+                rightDivider.setVisibility(View.GONE);
+            }else{
+                TextView rightDivider = (TextView) tabView.findViewById(R.id.right_divider);
+                rightDividers.add(rightDivider);
+            }
+
             CharSequence pageTitle = mTitles == null ? mViewPager.getAdapter().getPageTitle(i) : mTitles.get(i);
             if(showIcon){
                 int res = ((FragmentAdapter) mViewPager.getAdapter()).getIcon(i);
@@ -242,11 +253,27 @@ public class SlidingTabLayout extends HorizontalScrollView implements ViewPager.
             }else{
                 addTab(i, pageTitle.toString(), tabView);
             }
-
-
         }
 
         updateTabStyles();
+    }
+
+
+    public void setRightDividersShow(boolean isShow){
+        if(rightDividers != null){
+            if(rightDividers.size() > 0){
+                if(isShow){
+                    for(TextView textView:rightDividers){
+                        textView.setVisibility(View.VISIBLE);
+                    }
+                }else{
+                    for(TextView textView:rightDividers){
+                        textView.setVisibility(View.GONE);
+                    }
+                }
+            }
+        }
+
     }
 
     public void addNewTab(String title) {
