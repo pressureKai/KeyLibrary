@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     android:clipToPadding="false"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:paddingLeft="10dp">
 
     <TextView
         android:id="@+id/tv_tab_title"
@@ -42,14 +41,12 @@
         app:mv_strokeColor="#ffffff"
         app:mv_strokeWidth="1dp" />
 
-
+<!--    app:layout_constraintLeft_toRightOf="@+id/rtv_msg_tip"-->
     <TextView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/rtv_msg_tip"
+        app:layout_constraintRight_toRightOf="parent"
         android:layout_width="1dp"
-        android:paddingLeft="3dp"
-        android:layout_marginLeft="3dp"
         android:background="@android:color/darker_gray"
         android:layout_height="20dp"/>
 
