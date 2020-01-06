@@ -40,13 +40,12 @@
         app:mv_isRadiusHalfHeight="true"
         app:mv_strokeColor="#ffffff"
         app:mv_strokeWidth="1dp" />
-
-<!--    app:layout_constraintLeft_toRightOf="@+id/rtv_msg_tip"-->
     <TextView
         android:id="@+id/right_divider"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/rtv_msg_tip"
+        android:layout_marginLeft="10dp"
         android:layout_width="1dp"
         android:background="@android:color/darker_gray"
         android:layout_height="20dp"/>
