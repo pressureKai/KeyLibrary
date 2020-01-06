@@ -44,8 +44,8 @@
 
 
     <TextView
-        app:layout_constraintTop_toTopOf="@+id/rtv_msg_tip"
-        app:layout_constraintBottom_toBottomOf="@id/rtv_msg_tip"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="@+id/rtv_msg_tip"
         android:paddingTop="5dp"
         android:layout_width="1dp"
