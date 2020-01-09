@@ -50,6 +50,7 @@ import com.key.keylibrary.AAInfographicsLib.AAOptionsModel.AAOptions
 
 import com.google.gson.Gson
 import com.google.gson.internal.LinkedTreeMap
+import com.key.keylibrary.widget.CustomWebView
 import java.sql.DriverManager.println
 
 import java.util.HashMap
@@ -64,7 +65,7 @@ class AAMoveOverEventMessageModel {
 }
 
 @Keep
-class AAChartView : WebView {
+class AAChartView : CustomWebView {
 
     var contentWidth: Float? = null
     var contentHeight: Float? = null
