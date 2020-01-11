@@ -1,5 +1,6 @@
 package com.key.keylibrary.base
 
+import android.text.TextUtils
 import android.view.View
 import com.key.keylibrary.R
 import com.key.keylibrary.utils.UiUtils
@@ -64,6 +65,23 @@ abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
     }
 
 
+    fun setContentDes(des :String){
+        if(error_content_des != null){
+            if(!TextUtils.isEmpty(des)){
+                error_content_des.text = des
+            }
+        }
+    }
 
+
+    fun setRetryShow(isShow: Boolean){
+        if(retry != null){
+            if(isShow){
+                retry.visibility = View.VISIBLE
+            }else{
+                retry.visibility = View.GONE
+            }
+        }
+    }
 
 }
