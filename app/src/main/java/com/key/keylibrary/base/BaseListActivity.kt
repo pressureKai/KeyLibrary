@@ -40,7 +40,7 @@ abstract class BaseListActivity<T> : BaseActivity(), CustomAdapt {
 
 
 
-    private fun setListShow(isShow: Boolean){
+    public fun setListShow(isShow: Boolean){
         if(isShow){
             if(error_content != null){
                 error_content.visibility = View.VISIBLE
