@@ -15,4 +15,6 @@
     <color name="divider">#f9f9f9</color>
     <color name="trans_color">#01000000</color>
     <color name="red">#C30D23</color>
+    <color name="background_white_f2">#f2f2f2</color>
+    <color name="background_white_f9">#f9f9f9</color>
 </resources>
